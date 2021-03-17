@@ -1,0 +1,44 @@
+Personaje:
+    1. Luismi
+    2. Chayanne
+    3. Maribel Guardia
+    4. Tom Cruise
+    5. Carmen Salinas
+
+Arma:
+    1. Tacon de aguja
+    2. Soga
+    3. Veneno
+    4. Tijeras
+    5. Pala
+
+
+Lugar:
+    TODOS SON EN UN ESTUDIO DE GRABACIONES
+    1. Set de grabación
+    2. Camerino
+    3. Baño
+    4. Área común
+    5. Bodega de utileria
+
+
+    Angel Barreto:
+        SIEMPRE MATAR AL MISMO (Luismi)
+        Opcion 1 : 1-1-3
+        Opcion 2: 1-3-2
+        Opcion 3: 1-5-5
+        Opcion 4: 2-2-1
+
+    Daniel Bailon:
+        SIEMPRE MATAR AL MISMO (Carmen Salinas)
+        Opcion 1: 5-2-3
+        Opcion 2: 5-4-4
+        Opcion 3: 5-3-5
+        Opcion 4: 3-5-3
+    
+    Karen Rosales:
+        Opcion 1: 2-4-1
+        Opcion 2: 3-3-3
+        Opcion 3: 4-2-2
+        Opcion 4: 4-1-4
+        
