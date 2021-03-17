@@ -32,7 +32,7 @@ class Historias:
             self.pista_luismi1()
             
         if ale_luismi == 2:
-            print("El cuerpo de quien seria el niño di oro, estaba tirado en su camerino,se encontro una bebida alcoholica derramada y otra a medio llevar, presenta espuma en la boca por lo cual puede ser indicios de envenenamiento.")
+            print("El cuerpo de quien sería el niño di oro, estaba tirado en su camerino,se encontro una bebida alcoholica derramada y otra a medio llevar, presenta espuma en la boca por lo cual puede ser indicios de envenenamiento.")
             self.aux_arma = 3
             self.aux_asesino = 4
             self.pista_luismi2()
