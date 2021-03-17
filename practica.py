@@ -3,11 +3,14 @@ import random
 class Historias:
     personaje = 0
     arma = 0
+    aux_arma = 0
+    aux_asesino = 0
     matar = 0
     per_mat = 0
     arreglo_pers = ['Luismi', 'Chayanne', 'Maribel Guardia', 'Tom cruise', 'Carmelita Salinas']
     arreglo_modific = ['Luismi', 'Chayanne', 'Maribel Guardia', 'Tom cruise', 'Carmelita Salinas']
-    arreglo_arma = ['1', '2','3','4','5']
+    arreglo = ['Luismi', 'Chayanne', 'Maribel Guardia', 'Tom cruise', 'Carmelita Salinas']
+    arreglo_arma = ['Tacon de aguja', 'Soga','Veneno','Tijeras','Pala']
     
 #Este es para todos los pesonajes
     def ventana_ini(self):
@@ -20,9 +23,11 @@ class Historias:
 #---------------------------------------Este es solo para cuando matan a Luismi----------------------------------------------------------------
     def luismi(self):
         print ("NARRATIVA DE COMO SUCEDIERON LOS HECHOS")
-        #ale_luismi = random.randint(1,3)Esta linea se esta omitiendo por el momento 
+        #ale_luismi = random.randint(1,3)
         ale_luismi = 1
         if ale_luismi == 1:
+            self.aux_arma = 1
+            self.aux_asesino = 2
             self.pista_luismi1()
             
         if ale_luismi == 2:
@@ -112,7 +117,8 @@ class Historias:
 
 #Este es para todos los personajes 
     def acusar(self):
-        print("Es momento que digas quien es el responsable de la muerte de ", self.arreglo_pers[self.matar])
+        print("Es momento que digas quien es el responsable de la muerte de ", self.arreglo_pers[self.matar-1])
+        self.arreglo_pers.pop(self.matar-1)
         for i in range(0,len(self.arreglo_pers)):
             print(i+1,".-", self.arreglo_pers[i])
         self.personaje = int(input())
@@ -121,12 +127,25 @@ class Historias:
         for i in range(0, len(self.arreglo_arma)):
             print(i+1, ".-", self.arreglo_arma[i])
         self.arma = int(input())
-
-        if self.personaje == 1 and self.arma == 1:
-            print("Su respuesta fue correcta")
+                        
+        print(self.aux_asesino, "posicion de arma")
+            
+        if self.personaje == self.aux_asesino and self.arma == self.aux_arma:
+            print("Perro, lo descubriste")
+            print("Ya vente a CSI o Criminal Minds")
+            
+        elif self.personaje == self.aux_asesino or self.arma == self.aux_arma:
+            print("No estuviste taaaaaaaan mal")
+            print("El asesino es: ", self.arreglo[self.personaje-1])
+            print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
+            print("Mereces ser policia de barrio")
+            
         else:
-            print("La repuesta correcta es:")
-            print("Como sucedieron los hechos ")
+            print("Te fue muy mal")
+            print("El asesino es: ", self.arreglo[self.personaje])
+            print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
+            print("Dedicate a otras cosas")
+
 
 #---------------------------------------- Este es solo para Chayanne --------------------------------------------------
     def chayanne(self):
