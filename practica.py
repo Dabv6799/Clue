@@ -250,6 +250,10 @@ class Historias:
             self.pista_maribel1()      
             
         if ale_maribel == 2:
+            print("Se encontro a la señora Maribel tirada en el baño con signos de agresión fisica, los senos rebentados y la cara aboyada")
+            print("También tiene la nariz rota y se muestra signos de un golpe plano")
+            self.aux_arma = 5
+            self.aux_asesino = 2
             self.decision = 2
             self.pista_maribel2()
 
@@ -288,19 +292,18 @@ class Historias:
         self.per_mat = int(input())
 
         if (self.arreglo_modific[self.per_mat-1] == 'Chayanne'):
-            print("Aqui va la pista de Chayanne")
-
-        elif (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
-            print("Maribel Guardia")
+            print("Chayanne menciono que Maribel y el no mantenian una relación cercana y estuvo en el set de grabación cuando pasaron los hechos")
 
         elif (self.arreglo_modific[self.per_mat-1] == 'Tom cruise'):
-            print("Tom cruise")
+            print("Tom menciono que vio a Chayanne salir del vestidor de Maribel molesto")
 
         elif(self.arreglo_modific[self.per_mat-1] == 'Carmelita Salinas'):
-            print("Carmelita Salinas")
+            print("Carmelita mencino que no se encontraba en el lugar de hecho fue a pedir una pala a la bodega")
+            print("Pero le dijeron que Chayanne ya habia solicitado una")
 
         elif (self.arreglo_modific[self.per_mat-1] == "Luismi"):
-            print("luismi")
+            print("Luismi menciono haber visto a Maribel momentos antes de su muerte, estuvieron charlando")
+            print("Pero el tuvo una emergencia en el set de grabación y la dejo a solas")
 
         self.arreglo_modific.pop(self.per_mat-1)
 
@@ -382,18 +385,30 @@ class Historias:
 
 #-----------------------------------------------  Este es solo para carmelita  --------------------------------------------------
     def carmen(self):
-        print ("NARRATIVA DE COMO SUCEDIERON LOS HECHOS")
         ale_carmen = random.randint(1,3)
         #ale_carmen = 1
         if ale_carmen == 1:
+            print("Se encontro a la señora diputada con signos de asfixia con un color morado que creo se debe por la axfixia")
+            self.aux_arma = 2
+            self.aux_asesino = 3
             self.decision = 1
             self.pista_carmen1()
             
         if ale_carmen == 2:
+            print("La Sra. Diputada fue encontrada en el área común en un charco de sangre")
+            print("Tenía lesiones punzocortantes en el área toraxica y en el craneo")
+            print("Fue un poco terrorifico ver la cantidad de lesiones que tenía")
+            self.aux_arma = 4
+            self.aux_asesino = 1
             self.decision = 2
             self.pista_carmen2()
             
         if ale_carmen == 3:
+            print("Se encontro a una señora de aproximadamente 87 años de edad sin signos de vitales, además se encontro una pintura de ella pintada en oleo")
+            print("La señora presenta espuma en la boca, parecia que tenía rabia")
+            print("no presentaba pigmentación en los globulos oculares")
+            self.aux_arma = 3
+            self.aux_asesino = 4
             self.decision = 3
             self.pista_carmen3()
 
@@ -406,19 +421,19 @@ class Historias:
         self.per_mat = int(input())
 
         if (self.arreglo_modific[self.per_mat-1] == 'Chayanne'):
-            print("Aqui va la pista de Chayanne")
+            print("El papucho de todas las señoras nos menciono que en el momento de grabar la escena del comercial faltaba una soga")
+            print("También nos dijo que Maribel Guardia tuvo una polemica pelea con la diputada porque según menciona la señora era una chismosa y se entrometia en la vida de los demás")
 
         elif (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
-            print("Maribel Guardia")
+            print("El testimonio de la Sra. Maribel fue que ella y Carmen eran muy buenas amigas, siempre iban de compras y a comer")
+            print("Nos dijo que Carmelita tomaba muchas pastillas")
 
         elif (self.arreglo_modific[self.per_mat-1] == 'Tom cruise'):
-            print("Tom cruise")
-
-        elif(self.arreglo_modific[self.per_mat-1] == 'Carmelita Salinas'):
-            print("Carmelita Salinas")
+            print("Tom aclaro que él y Luismi estaban en los vestidores, según aclaro Luismi se puso los tacones de maribel para ver si le quedaban")
 
         elif (self.arreglo_modific[self.per_mat-1] == "Luismi"):
-            print("luismi")
+            print("Luismi dijo que vio a dirijirse al baño a Maribel")
+            print("Menciono algo muy inquietante, dijo que se ve bien con tacones")
 
         self.arreglo_modific.pop(self.per_mat-1)
 
@@ -432,19 +447,17 @@ class Historias:
         self.per_mat = int(input())
 
         if (self.arreglo_modific[self.per_mat-1] == 'Chayanne'):
-            print("Aqui va la pista de Chayanne")
+            print("Chayanne menciono que el estuvo en el baño rebentando una espinilla que le salio en el menton")
 
         elif (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
-            print("Maribel Guardia")
+            print("Maribel menciono que vio salir a Carmelita salir de su camerino hacia el área común")
+            print("Adjunto que vio a Luismi salir detras de ella")
 
         elif (self.arreglo_modific[self.per_mat-1] == 'Tom cruise'):
-            print("Tom cruise")
-
-        elif(self.arreglo_modific[self.per_mat-1] == 'Carmelita Salinas'):
-            print("Carmelita Salinas")
+            print("Tom menciono que Carmelita Y Luismi mantenian una relación extralaboral")
 
         elif (self.arreglo_modific[self.per_mat-1] == "Luismi"):
-            print("luismi")
+            print("Luismi menciono que estaba en el baño cuando pasaron los hechos, además se notaba algo agitado")
 
         self.arreglo_modific.pop(self.per_mat-1)
 
@@ -457,19 +470,17 @@ class Historias:
         self.per_mat = int(input())
 
         if (self.arreglo_modific[self.per_mat-1] == 'Chayanne'):
-            print("Aqui va la pista de Chayanne")
+            print("Chayanne menciono que Tom Cruise tenía una fuerte rabía por la doñita")
 
         elif (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
-            print("Maribel Guardia")
+            print("Maribel menciono que ella fue quien encontro el cadaver, agrego que encontro un pequeño frasco de duddosa procedencia")
+            print("Se sabe que la doña tomaba medicina para el corazón, sin embargo, jamás he visto esta marca en un medicamento")
 
         elif (self.arreglo_modific[self.per_mat-1] == 'Tom cruise'):
-            print("Tom cruise")
-
-        elif(self.arreglo_modific[self.per_mat-1] == 'Carmelita Salinas'):
-            print("Carmelita Salinas")
+            print("Tom menciono que el se encontraba en el set de grabación, realizando el sketch del granjero ")
 
         elif (self.arreglo_modific[self.per_mat-1] == "Luismi"):
-            print("luismi")
+            print("Luismi dijo que vio a Tom con un frasco de medicamentos, se mostro desconcertado porque no sabía que el tomará algo")
 
         self.arreglo_modific.pop(self.per_mat-1)
 
