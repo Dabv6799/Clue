@@ -546,17 +546,18 @@ class Historias:
 
 #Esto es algo asi como el main
 Clue = Historias()
-Clue.ventana_ini()
 os.system('cls')
+print("-----------------------------------------------------COMIENZA EL JUEGO---------------------------------------------------------")
 print("Se acaba de cometer un homicidio y tu eres el encargado de averiguar quien fue el asesino y que arma utilizaron en el asesinato")
 print("Se te iran dando una serie de pistas en base a los personajes que decidas entrevistar para determinar quien fue el asesino.")
-'''print("Cuentas con la siguiente informacion para empezar: ")
+print("Cuentas con la siguiente informacion para empezar: ")
 print("Personajes:")
 print("1. Luismi \n2. Chayanne\n3. Maribel Guardia\n4. Tom Cruise\n5. Carmen Salinas")
 print("Armas:")
-print("1. Tacon de aguja\n2. Soga\n3. Veneno\n4. Tijeras\n5. Pala")'''
+print("1. Tacon de aguja\n2. Soga\n3. Veneno\n4. Tijeras\n5. Pala")
 print("¡SUERTE EN EL DESAFIO!(Presiona cualquier tecla para continuar)")
 input()
+Clue.ventana_ini()
 
 #Este es para cuando queremos matar a Luismi
 if Clue.matar == 1:
@@ -584,6 +585,7 @@ if Clue.matar == 1:
                     Clue.pista_luismi3()
         if cos == 2:
             Clue.acusar()
+            input()
             ciclo = False
 
 #Este es para cuando queremos matar a Chayane
@@ -610,6 +612,7 @@ if Clue.matar == 2:
                 
         if cos == 2:
             Clue.acusar()
+            input()
             ciclo = False 
 
 #Este es para cuando queremos matar a Maribel Guardia
@@ -636,6 +639,7 @@ if Clue.matar == 3:
                 
         if cos == 2:
             Clue.acusar()
+            input()
             ciclo = False
 
 #Este es para cuando queremos matar a Tom Cruise
@@ -662,6 +666,7 @@ if Clue.matar == 4:
                 
         if cos == 2:
             Clue.acusar()
+            input()
             ciclo = False
 
 ##Este es para cuando queremos matar a Carmelita Salinas
@@ -690,4 +695,5 @@ if Clue.matar == 5:
                 
         if cos == 2:
             Clue.acusar()
+            input()
             ciclo = False
