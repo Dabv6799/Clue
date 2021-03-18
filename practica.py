@@ -183,11 +183,10 @@ class Historias:
 
 #---------------------------------------- Este es solo para Chayanne --------------------------------------------------
     def chayanne(self):
-        ale_chayanne = random.randint(1,3)
+        ale_chayanne = random.randint(1,2)
         if ale_chayanne == 1:
             os.system('cls')
             self.decision = 1
-            
             print("El torero se encontró sin vida en el set de grabación,mostraba signos de muerte por perdida de aire, algunos golpes en el rostro y lo que parecen ser cortes o rasguños en el cuello tambien")
             self.aux_arma = 2
             self.aux_asesino = 4
@@ -274,11 +273,11 @@ class Historias:
 
 #-----------------------------------------------  Este es solo para Maribel guardia --------------------------------------------------
     def maribel(self):
-        ale_maribel = random.randint(1,3)
-        print(ale_maribel)
+        ale_maribel = random.randint(1,2)
         if ale_maribel == 1:
             self.decision = 1
             os.system('cls')
+
             print("Se encontro el cuerpo de maribel postrado a la mitad del pasillo, su cuerpo se ve bastante amarillo no sabemos si es la edad o si tomo algo")
             print("tambien se encontraron algunos golpes pero creemos que los golpes son de la caida ")
             self.aux_arma = 3
@@ -359,7 +358,7 @@ class Historias:
 
 #-----------------------------------------------  Este es solo para Tom Cruise --------------------------------------------------
     def tom(self):
-        ale_tom = random.randint(1,3)
+        ale_tom = random.randint(1,2)
         if ale_tom == 1:
             self.decision = 1
             os.system('cls')
@@ -611,7 +610,7 @@ if Clue.matar == 2:
                 
         if cos == 2:
             Clue.acusar()
-            ciclo = False
+            ciclo = False 
 
 #Este es para cuando queremos matar a Maribel Guardia
 if Clue.matar == 3:
