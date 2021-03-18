@@ -26,7 +26,8 @@ class Historias:
         ale_luismi = random.randint(1,3)
         #ale_luismi = 1
         if ale_luismi == 1:
-            self.decision == 1
+            self.decision = 1
+            print(self.decision)
             print("Se encontró un cuerpo tan naranja como el sol, tenia rasgos de pelea,rasguños caracteristicos de uñas largas(o postizas),con varias lesiones punzantes en el torax")
             print("El cuerpo estaba entre el baño y el camerino de los participantes del comercial")
             self.aux_arma = 1
@@ -34,14 +35,14 @@ class Historias:
             self.pista_luismi1()
             
         if ale_luismi == 2:
-            self.decision == 2
+            self.decision = 2
             print("El cuerpo de quien sería el niño di oro, estaba tirado en su camerino,se encontro una bebida alcoholica derramada y otra a medio llevar, presenta espuma en la boca por lo cual puede ser indicios de envenenamiento.")
             self.aux_arma = 3
             self.aux_asesino = 4
             self.pista_luismi2()
             
         if ale_luismi == 3:
-            self.decision == 3
+            self.decision = 3
             print("El cuerpo de luismi se estaba debajo de unas lonas en la bodega de utileria, casualmente en la bodega solo tienen sogas y palas,pero en este caso solo habia sogas")
             print("Presenta golpes contundentes en la nuca, posiblemente hechos con algun objeto lo suficientemente duro para realizar el daño")
             self.aux_arma = 5
@@ -163,17 +164,16 @@ class Historias:
 
 #---------------------------------------- Este es solo para Chayanne --------------------------------------------------
     def chayanne(self):
-      
         ale_chayanne = random.randint(1,3)
         if ale_chayanne == 1:
-            self.decision == 1
+            self.decision = 1
             print("El torero se encontró sin vida en el set de grabación,mostraba signos de muerte por perdida de aire, algunos golpes en el rostro y lo que parecen ser cortes o rasguños en el cuello tambien")
             self.aux_arma = 2
             self.aux_asesino = 4
             self.pista_chayanne1()
             
         if ale_chayanne == 2:
-            self.decision == 2
+            self.decision = 2
             print("Se encontro un cuerpo tirado a la mitad del set de grabacion, el cuerpo lleva horas tirado en ese lugar creyendo que era una actuacion")
             print("Al revisarlo nos percatamos que es el hermoso Chayanne, que de hermoso ya no tiene nada porque su rostro fue destruido")
             print("Y los cortes en su cara son bastante profundos")
@@ -240,8 +240,9 @@ class Historias:
 #-----------------------------------------------  Este es solo para Maribel guardia --------------------------------------------------
     def maribel(self):
         ale_maribel = random.randint(1,3)
+        print(ale_maribel)
         if ale_maribel == 1:
-            self.decision == 1
+            self.decision = 1
             print("Se encontro el cuerpo de maribel postrado a la mitad del pasillo, su cuerpo se ve bastante amarillo no sabemos si es la edad o si tomo algo")
             print("tambien se encontraron algunos golpes pero creemos que los golpes son de la caida ")
             self.aux_arma = 3
@@ -249,7 +250,7 @@ class Historias:
             self.pista_maribel1()      
             
         if ale_maribel == 2:
-            self.decision == 2
+            self.decision = 2
             self.pista_maribel2()
 
     #Estas son las narrativas 2 de Randon Cuando matan a maribel
@@ -310,7 +311,7 @@ class Historias:
     def tom(self):
         ale_tom = random.randint(1,3)
         if ale_tom == 1:
-            self.decision == 1
+            self.decision = 1
             print("Acaba de suceder una de las peores tragedias, Tom Cruise esta muerto se encontro su cuerpo tirado en el camerino, este presenta marcas alrededor del cuello")
             print("Era el actor principal en una pelicula y todo pareciera que me suicido pero la escena del crimen demostraba lo contrario")
             self.aux_arma = 2
@@ -318,7 +319,7 @@ class Historias:
             self.pista_tom1()
             
         if ale_tom == 2:
-            self.decision == 2
+            self.decision = 2
             print("Esta es sin duda la peor escena del crimen, se encontro a Tom Cruise un ojo de fuera pareciera que algo le atraveso el craneo, el se encontraba sentado en area comun")
             print("Aun no estamos seguros como sucedieron los hechos ")
             self.aux_arma = 1
@@ -385,15 +386,15 @@ class Historias:
         ale_carmen = random.randint(1,3)
         #ale_carmen = 1
         if ale_carmen == 1:
-            self.decision == 1
+            self.decision = 1
             self.pista_carmen1()
             
         if ale_carmen == 2:
-            self.decision == 2
+            self.decision = 2
             self.pista_carmen2()
             
         if ale_carmen == 3:
-            self.decision == 3
+            self.decision = 3
             self.pista_carmen3()
 
     #Estas son las narrativas 2 de Randon Cuando matan a maribel
@@ -499,6 +500,7 @@ if Clue.matar == 1:
                 Clue.acusar() 
                 ciclo = False
             else:
+                print(Clue.decision, "dime que esta pasando")
                 if Clue.decision == 1:
                     Clue.pista_luismi1()
                 elif Clue.decision == 2:
