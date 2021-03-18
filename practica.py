@@ -159,9 +159,8 @@ class Historias:
 
 #---------------------------------------- Este es solo para Chayanne --------------------------------------------------
     def chayanne(self):
-        print ("NARRATIVA DE COMO SUCEDIERON LOS HECHOS")
-        #ale_luismi = random.randint(1,3)Esta linea se esta omitiendo por el momento 
-        ale_chayanne = 1
+      
+        ale_chayanne = random.randint(1,3)
         if ale_chayanne == 1:
             print("El torero se encontró sin vida en el set de grabación,mostraba signos de muerte por perdida de aire, algunos golpes en el rostro y lo que parecen ser cortes o rasguños en el cuello tambien")
             self.aux_arma = 2
@@ -169,10 +168,13 @@ class Historias:
             self.pista_chayanne1()
             
         if ale_chayanne == 2:
+            print("Se encontro un cuerpo tirado a la mitad del set de grabacion, el cuerpo lleva horas tirado en ese lugar creyendo que era una actuacion")
+            print("Al revisarlo nos percatamos que es el hermoso Chayanne, que de hermoso ya no tiene nada porque su rostro fue destruido")
+            print("Y los cortes en su cara son bastante profundos")
+            self.aux_arma = 4
+            self.aux_asesino = 4
             self.pista_chayanne2()
             
-        if ale_chayanne == 3:
-            self.pista_chayanne3()
 
     #Estas son las narrativas 2 de Randon Cuando matan a Chayanne
     def pista_chayanne1(self):
@@ -208,46 +210,21 @@ class Historias:
             print(i+1,".-", self.arreglo_modific[i])
         self.per_mat = int(input())
 
-        if (self.arreglo_modific[self.per_mat-1] == 'Chayanne'):
-            print("Aqui va la pista de Chayanne")
-
-        elif (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
-            print("Maribel Guardia")
+        if (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
+            print("Al entrevistar a Maribel Guardia nos menciona que ella se encontraba en el area comun limpiando sus tacones, esto porque habia teniado un accidente con la comida")
+            print("Y que antes, habia visto a Chayanne ensayar para la presentacion del comercial")
 
         elif (self.arreglo_modific[self.per_mat-1] == 'Tom cruise'):
-            print("Tom cruise")
+            print("Notamos un comportamiento extraño en la actitud de Tom Cruise, al entrevistarlo nos menciona que esta muy desconcertado con la muerte de su amigo")
+            print("Nos dice que en el dia no lo habia visto porque tenia gran malestar estomacal por ello la mayor parte del dia estuvo en el baño")
 
         elif(self.arreglo_modific[self.per_mat-1] == 'Carmelita Salinas'):
-            print("Carmelita Salinas")
+            print("Llegamos a donde esta carmelita, ella se encontraba cortando hilo para tejer pero notamos algo extraño sus tijeras tenian una mancha entraña en la punta")
+            print("Nos menciona solo queria relajarse un poco y es por ello que esta tejiendo")
 
         elif (self.arreglo_modific[self.per_mat-1] == "Luismi"):
-            print("luismi")
-
-        self.arreglo_modific.pop(self.per_mat-1)
-
-#Estas son las narrativas 2 de Randon Cuando matan a Chayanne
-    def pista_chayanne3(self):
-        print("Entrevista a las personas que estuvieron cerca de la escena")
-        print("¿A quien deseas entrevistar?")
-        for i in range(0,len(self.arreglo_modific)):
-            print(i+1,".-", self.arreglo_modific[i])
-        self.per_mat = int(input())
-
-        if (self.arreglo_modific[self.per_mat-1] == 'Chayanne'):
-            print("Aqui va la pista de Chayanne")
-
-        elif (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
-            print("Maribel Guardia")
-
-        elif (self.arreglo_modific[self.per_mat-1] == 'Tom cruise'):
-            print("Tom cruise")
-
-        elif(self.arreglo_modific[self.per_mat-1] == 'Carmelita Salinas'):
-            print("Carmelita Salinas")
-
-        elif (self.arreglo_modific[self.per_mat-1] == "Luismi"):
-            print("luismi")
-
+            print("Cuando llegamos al camerino de luismi, el se encontraba observandose en el espejo, se le veia el amor en su rostro, todo estaba bastante limpio y tranquilo")
+            print("Nos limitamos a hacer muchas preguntas, ya que dijo que estuvo practicando sus expresiones frente al espejo")
         self.arreglo_modific.pop(self.per_mat-1)
 
 #----------------------------------------------- Aqui termina el bloque de chayanne -------------------------------------------------
@@ -256,17 +233,16 @@ class Historias:
 
 #-----------------------------------------------  Este es solo para Maribel guardia --------------------------------------------------
     def maribel(self):
-        print ("NARRATIVA DE COMO SUCEDIERON LOS HECHOS")
-        #ale_luismi = random.randint(1,3)Esta linea se esta omitiendo por el momento 
-        ale_chayanne = 1
-        if ale_chayanne == 1:
-            self.pista_maribel1()
+        ale_maribel = random.randint(1,3)
+        if ale_maribel == 1:
+            print("Se encontro el cuerpo de maribel postrado a la mitad del pasillo, su cuerpo se ve bastante amarillo no sabemos si es la edad o si tomo algo")
+            print("tambien se encontraron algunos golpes pero creemos que los golpes son de la caida ")
+            self.aux_arma = 3
+            self.aux_asesino = 1
+            self.pista_maribel1()      
             
-        if ale_chayanne == 2:
+        if ale_maribel == 2:
             self.pista_maribel2()
-            
-        if ale_chayanne == 3:
-            self.pista_maribel3()
 
     #Estas son las narrativas 2 de Randon Cuando matan a maribel
     def pista_maribel1(self):
@@ -277,20 +253,20 @@ class Historias:
         self.per_mat = int(input())
 
         if (self.arreglo_modific[self.per_mat-1] == 'Chayanne'):
-            print("Aqui va la pista de Chayanne")
-
-        elif (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
-            print("Maribel Guardia")
+            print("Chayanne nos dice que hablo con maribel antes en el area comun, ellos hablaban de sus dietas y compartieron un poco de sus alimentos")
+            print("Tambien nos menciona que muchos decian que ella y Tom tenian bastantes problemas")
 
         elif (self.arreglo_modific[self.per_mat-1] == 'Tom cruise'):
-            print("Tom cruise")
+            print("Tom aclara que el y ella, definitivamente tenian bastantes problemas pero que el habia estado buscando su vestuario en la bodega")
+            print("El llevaba una soga dice 'Que es parte del vestuario', pero que vio a luismi y ella hablar cerca del baño ")
 
         elif(self.arreglo_modific[self.per_mat-1] == 'Carmelita Salinas'):
-            print("Carmelita Salinas")
+            print("Carmelita muy amable como siempre nos recibio de muy buena manera, ella tenia unos tacones muy bonitos que eran de maribel")
+            print("dijo que los habia pedido prestado y la estuvo buscando para entregarlos pero nunca la encontro")
 
         elif (self.arreglo_modific[self.per_mat-1] == "Luismi"):
-            print("luismi")
-
+            print("A luismi nos costo bastante encontralo, parecia que se estaba escondiendo de alguien 'sospechoso no?' aparte tenia un olor extraño")
+            print("Dice que si hablaron no nos dijo mucho, pero que le dio a probar un poco de su comida porque ella estaba muy hambrienta")
         self.arreglo_modific.pop(self.per_mat-1)
 
 
@@ -319,49 +295,27 @@ class Historias:
 
         self.arreglo_modific.pop(self.per_mat-1)
 
-#Estas son las narrativas 2 de Randon Cuando matan a Maribel
-    def pista_maribel3(self):
-        print("Entrevista a las personas que estuvieron cerca de la escena")
-        print("¿A quien deseas entrevistar?")
-        for i in range(0,len(self.arreglo_modific)):
-            print(i+1,".-", self.arreglo_modific[i])
-        self.per_mat = int(input())
-
-        if (self.arreglo_modific[self.per_mat-1] == 'Chayanne'):
-            print("Aqui va la pista de Chayanne")
-
-        elif (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
-            print("Maribel Guardia")
-
-        elif (self.arreglo_modific[self.per_mat-1] == 'Tom cruise'):
-            print("Tom cruise")
-
-        elif(self.arreglo_modific[self.per_mat-1] == 'Carmelita Salinas'):
-            print("Carmelita Salinas")
-
-        elif (self.arreglo_modific[self.per_mat-1] == "Luismi"):
-            print("luismi")
-
-        self.arreglo_modific.pop(self.per_mat-1)
-
 #----------------------------------------------- Aqui termina el bloque de Maribel -------------------------------------------------
 
 
 #-----------------------------------------------  Este es solo para Tom Cruise --------------------------------------------------
     def tom(self):
-        print ("NARRATIVA DE COMO SUCEDIERON LOS HECHOS")
-        #ale_luismi = random.randint(1,3)Esta linea se esta omitiendo por el momento 
-        ale_tom = 1
+        ale_tom = random.randint(1,3)
         if ale_tom == 1:
+            print("Acaba de suceder una de las peores tragedias, Tom Cruise esta muerto se encontro su cuerpo tirado en el camerino, este presenta marcas alrededor del cuello")
+            print("Era el actor principal en una pelicula y todo pareciera que me suicido pero la escena del crimen demostraba lo contrario")
+            self.aux_arma = 2
+            self.aux_asesino = 2
             self.pista_tom1()
             
         if ale_tom == 2:
+            print("Esta es sin duda la peor escena del crimen, se encontro a Tom Cruise un ojo de fuera pareciera que algo le atraveso el craneo, el se encontraba sentado en area comun")
+            print("Aun no estamos seguros como sucedieron los hechos ")
+            self.aux_arma = 1
+            self.aux_asesino = 1
             self.pista_tom2()
-            
-        if ale_tom == 3:
-            self.pista_tom3()
 
-    #Estas son las narrativas 2 de Randon Cuando matan a maribel
+   #Estas son las narrativas 2 de Randon Cuando matan a maribel
     def pista_tom1(self):
         print("Entrevista a las personas que estuvieron cerca de la escena")
         print("¿A quien deseas entrevistar?")
@@ -370,19 +324,19 @@ class Historias:
         self.per_mat = int(input())
 
         if (self.arreglo_modific[self.per_mat-1] == 'Chayanne'):
-            print("Aqui va la pista de Chayanne")
+            print("Cuando se entrevisto a chayanne notamos que en sus brazos tenia rasguños y algunas marcas extrañas, menciona que es parte de pelicula en la que trabaja")
+            print("Dice que no habia vistro a Tom y que estuvo en el set de grabaciones haciendo su pelicula")
 
         elif (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
-            print("Maribel Guardia")
-
-        elif (self.arreglo_modific[self.per_mat-1] == 'Tom cruise'):
-            print("Tom cruise")
+            print("Al llegar con ella nos menciono que Chayanne en ningun momento habia estado en el set, que ella estuvo pasando del set al area comun")
+            print("Aunque ella llevaba una pala un tanto extraña, no dio explicacion de la pala")
 
         elif(self.arreglo_modific[self.per_mat-1] == 'Carmelita Salinas'):
-            print("Carmelita Salinas")
+            print("La señora Carmen nos dijo que ella no habia visto nada que estuvo en la bodega junto con luismi buscando utileria para la pelicula que iba a grabar Tom")
 
         elif (self.arreglo_modific[self.per_mat-1] == "Luismi"):
-            print("luismi")
+            print("Al llegar con luismi con confirma lo que dijo la señora Carmen pero nos da un dato extra, menciona que el papel principal que era de Tom, chayanne lo habia anelado durante mucho tiempo")
+            print("Y que cuando lo tuvo Tom, chayanne se enojo muchisimo")
 
         self.arreglo_modific.pop(self.per_mat-1)
 
@@ -396,47 +350,22 @@ class Historias:
         self.per_mat = int(input())
 
         if (self.arreglo_modific[self.per_mat-1] == 'Chayanne'):
-            print("Aqui va la pista de Chayanne")
+            print("Chayanne dijo que llevaba bastante prisa y no tenia mucho tiempo de hablar, llevaba una pala y dijo que tenia que ir a plantar arboles")
+            print("Dijo que la ultima vez que hablo con chayanne estaba en su camerino hablando y que se veia muy feliz")
 
         elif (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
-            print("Maribel Guardia")
-
-        elif (self.arreglo_modific[self.per_mat-1] == 'Tom cruise'):
-            print("Tom cruise")
-
+            print("Estaba muy triste porque sus tacones estaban extraviados y los habia buscado todo el dia dentro de su camerino ")
+            print("Y que la ultima vez que vio a Tom fue discutiendo con luismi cerca del area comun, pero no le habia tomado mucha importanci, dice que en ese momento aun tenia sus tacones")
+       
         elif(self.arreglo_modific[self.per_mat-1] == 'Carmelita Salinas'):
-            print("Carmelita Salinas")
+            print("Carmelita dijo que vio los tacones de Maribel en el area comun que ahi los habia dejado y que cuando ella salio, estaba llegando Tom y Luismi")
+            print("despues de eso ella se retiro para dejarlos hablar con tranquilidad")
 
         elif (self.arreglo_modific[self.per_mat-1] == "Luismi"):
-            print("luismi")
+            print("Luismi menciono que el habia platicando con Tom pero despues de un rato en el area comun se retiro a su camerino")
+            print("Notamos que en su zapato tiene un poco de sangre, dijo que era un poco de sangre de su nariz")
 
         self.arreglo_modific.pop(self.per_mat-1)
-
-#Estas son las narrativas 2 de Randon Cuando matan a Maribel
-    def pista_tom3(self):
-        print("Entrevista a las personas que estuvieron cerca de la escena")
-        print("¿A quien deseas entrevistar?")
-        for i in range(0,len(self.arreglo_modific)):
-            print(i+1,".-", self.arreglo_modific[i])
-        self.per_mat = int(input())
-
-        if (self.arreglo_modific[self.per_mat-1] == 'Chayanne'):
-            print("Aqui va la pista de Chayanne")
-
-        elif (self.arreglo_modific[self.per_mat-1] == 'Maribel Guardia'):
-            print("Maribel Guardia")
-
-        elif (self.arreglo_modific[self.per_mat-1] == 'Tom cruise'):
-            print("Tom cruise")
-
-        elif(self.arreglo_modific[self.per_mat-1] == 'Carmelita Salinas'):
-            print("Carmelita Salinas")
-
-        elif (self.arreglo_modific[self.per_mat-1] == "Luismi"):
-            print("luismi")
-
-        self.arreglo_modific.pop(self.per_mat-1)
-
 #----------------------------------------------- Aqui termina el bloque de Tom -------------------------------------------------
 
 
