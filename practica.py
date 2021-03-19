@@ -153,7 +153,6 @@ class Historias:
             print(i+1, ".-", self.arreglo_arma[i])
         self.arma = int(input())
                         
-        print(self.aux_asesino, "posicion de arma")
             
         if self.personaje == self.aux_asesino and self.arma == self.aux_arma:
 
@@ -167,7 +166,7 @@ class Historias:
             os.system('cls')
 
             print("No estuviste taaaaaaaan mal")
-            print("El asesino es: ", self.arreglo[self.personaje-1])
+            print("El asesino es: ", self.arreglo[self.aux_asesino-1])
             print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
             print("Mereces ser policia de barrio")
             
@@ -176,7 +175,7 @@ class Historias:
             os.system('cls')
 
             print("Te fue muy mal")
-            print("El asesino es: ", self.arreglo[self.personaje])
+            print("El asesino es: ", self.arreglo[self.aux_asesino-1])
             print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
             print("Dedicate a otras cosas")
 
@@ -274,6 +273,7 @@ class Historias:
 #-----------------------------------------------  Este es solo para Maribel guardia --------------------------------------------------
     def maribel(self):
         ale_maribel = random.randint(1,2)
+        
         if ale_maribel == 1:
             self.decision = 1
             os.system('cls')
@@ -570,6 +570,7 @@ if Clue.matar == 1:
         print("2.-Declarar al culpable")
         cos = int(input())
         os.system('cls')
+        
         if cos == 1:
             if len(Clue.arreglo_modific) == 0:
                 print("Entrevistaste a todos los sospechosos, tendras que acusar al culpable")
