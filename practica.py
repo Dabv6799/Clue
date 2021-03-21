@@ -157,16 +157,14 @@ class Historias:
         if self.personaje == self.aux_asesino  and self.arma == self.aux_arma:
 
             os.system('cls')
-            print(self.personaje, "posicion de asesino escogido")
-            print(self.aux_asesino, "posicion de asesino")
+
             print("Perro, lo descubriste")
             print("Ya vente a CSI o Criminal Minds")
             
         elif self.personaje == self.aux_asesino or self.arma == self.aux_arma:
 
             os.system('cls')
-            print(self.personaje, "posicion de asesino escogido")
-            print(self.aux_asesino, "posicion de asesino")
+
             print("No estuviste taaaaaaaan mal")
             print("El asesino es: ", self.arreglo[self.aux_asesino-1])
             print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
@@ -175,8 +173,7 @@ class Historias:
         else:
 
             os.system('cls')
-            print(self.personaje, "posicion de asesino escogido")
-            print(self.aux_asesino, "posicion de asesino")
+
             print("Te fue muy mal")
             print("El asesino es: ", self.arreglo[self.aux_asesino-1])
             print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
