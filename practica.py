@@ -32,7 +32,7 @@ class Historias:
             print("Pobre Luis Miguel...se encontró un cuerpo tan naranja como el sol, tenia rasgos de pelea,rasguños caracteristicos de uñas largas(o postizas),con varias lesiones punzantes en el torax")
             print("El cuerpo estaba entre el baño y el camerino de los participantes del comercial")
             self.aux_arma = 1
-            self.aux_asesino = 3
+            self.aux_asesino = 2
             self.pista_luismi1()
             
         if ale_luismi == 2:
@@ -40,16 +40,16 @@ class Historias:
             os.system('cls')
             print("El cuerpo de quien sería el niño di oro(Luismi), estaba tirado en su camerino,se encontro una bebida alcoholica derramada y otra a medio llenar, presenta espuma en la boca por lo cual puede ser indicios de envenenamiento.")
             self.aux_arma = 3
-            self.aux_asesino = 4
+            self.aux_asesino = 3
             self.pista_luismi2()
             
         if ale_luismi == 3:
             self.decision = 3
             os.system('cls')
-            print("El cuerpo de Luismi se estaba debajo de unas lonas en la bodega de utileria, casualmente en la bodega solo tienen sogas y palas,pero en este caso solo habia sogas")
+            print("El cuerpo de Luismi estaba debajo de unas lonas en la bodega de utileria, casualmente en la bodega solo tienen sogas y palas,pero en este caso solo habia sogas")
             print("Presenta golpes contundentes en la nuca, posiblemente hechos con algun objeto lo suficientemente duro para realizar el daño")
             self.aux_arma = 5
-            self.aux_asesino = 5
+            self.aux_asesino = 4
             self.pista_luismi3()
 
     #Estas son las narrativas 2 de Randon Cuando matan a Luismi
@@ -155,17 +155,19 @@ class Historias:
                         
         print(self.aux_asesino, "posicion de arma")
             
-        if self.personaje == self.aux_asesino and self.arma == self.aux_arma:
+        if self.personaje == self.aux_asesino  and self.arma == self.aux_arma:
 
             os.system('cls')
-
+            print(self.personaje, "posicion de asesino escogido")
+            print(self.aux_asesino, "posicion de asesino")
             print("Perro, lo descubriste")
             print("Ya vente a CSI o Criminal Minds")
             
         elif self.personaje == self.aux_asesino or self.arma == self.aux_arma:
 
             os.system('cls')
-
+            print(self.personaje, "posicion de asesino escogido")
+            print(self.aux_asesino, "posicion de asesino")
             print("No estuviste taaaaaaaan mal")
             print("El asesino es: ", self.arreglo[self.personaje-1])
             print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
@@ -174,7 +176,8 @@ class Historias:
         else:
 
             os.system('cls')
-
+            print(self.personaje, "posicion de asesino escogido")
+            print(self.aux_asesino, "posicion de asesino")
             print("Te fue muy mal")
             print("El asesino es: ", self.arreglo[self.personaje])
             print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
@@ -190,7 +193,7 @@ class Historias:
             
             print("El torero se encontró sin vida en el set de grabación,mostraba signos de muerte por perdida de aire, algunos golpes en el rostro y lo que parecen ser cortes o rasguños en el cuello tambien")
             self.aux_arma = 2
-            self.aux_asesino = 4
+            self.aux_asesino = 3
             self.pista_chayanne1()
             
         if ale_chayanne == 2:
@@ -201,7 +204,7 @@ class Historias:
             print("Al revisarlo nos percatamos que es el hermoso Chayanne, que de hermoso ya no tiene nada porque su rostro fue destruido")
             print("Y los cortes en su cara son bastante profundos")
             self.aux_arma = 4
-            self.aux_asesino = 4
+            self.aux_asesino = 3
             self.pista_chayanne2()
             
 
@@ -564,7 +567,7 @@ if Clue.matar == 1:
     Clue.luismi()
     ciclo = True
     while ciclo:
-        print("Con los datos encontrados en la entrevita realizada a uno los sospechosos")
+        print("Con los datos encontrados en la entrevita realizada a uno de los sospechosos")
         print("¿Quieres entrevistar a otro de los sospechosos o acusar al culpable?")
         print("1.-Otra pista")
         print("2.-Declarar al culpable")
