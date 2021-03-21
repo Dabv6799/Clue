@@ -153,7 +153,6 @@ class Historias:
             print(i+1, ".-", self.arreglo_arma[i])
         self.arma = int(input())
                         
-        print(self.aux_asesino, "posicion de arma")
             
         if self.personaje == self.aux_asesino  and self.arma == self.aux_arma:
 
@@ -169,7 +168,7 @@ class Historias:
             print(self.personaje, "posicion de asesino escogido")
             print(self.aux_asesino, "posicion de asesino")
             print("No estuviste taaaaaaaan mal")
-            print("El asesino es: ", self.arreglo[self.personaje-1])
+            print("El asesino es: ", self.arreglo[self.aux_asesino-1])
             print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
             print("Mereces ser policia de barrio")
             
@@ -179,18 +178,17 @@ class Historias:
             print(self.personaje, "posicion de asesino escogido")
             print(self.aux_asesino, "posicion de asesino")
             print("Te fue muy mal")
-            print("El asesino es: ", self.arreglo[self.personaje])
+            print("El asesino es: ", self.arreglo[self.aux_asesino-1])
             print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
             print("Dedicate a otras cosas")
 
 
 #---------------------------------------- Este es solo para Chayanne --------------------------------------------------
     def chayanne(self):
-        ale_chayanne = random.randint(1,3)
+        ale_chayanne = random.randint(1,2)
         if ale_chayanne == 1:
             os.system('cls')
             self.decision = 1
-            
             print("El torero se encontró sin vida en el set de grabación,mostraba signos de muerte por perdida de aire, algunos golpes en el rostro y lo que parecen ser cortes o rasguños en el cuello tambien")
             self.aux_arma = 2
             self.aux_asesino = 3
@@ -277,11 +275,12 @@ class Historias:
 
 #-----------------------------------------------  Este es solo para Maribel guardia --------------------------------------------------
     def maribel(self):
-        ale_maribel = random.randint(1,3)
-        print(ale_maribel)
+        ale_maribel = random.randint(1,2)
+        
         if ale_maribel == 1:
             self.decision = 1
             os.system('cls')
+
             print("Se encontro el cuerpo de maribel postrado a la mitad del pasillo, su cuerpo se ve bastante amarillo no sabemos si es la edad o si tomo algo")
             print("tambien se encontraron algunos golpes pero creemos que los golpes son de la caida ")
             self.aux_arma = 3
@@ -362,7 +361,7 @@ class Historias:
 
 #-----------------------------------------------  Este es solo para Tom Cruise --------------------------------------------------
     def tom(self):
-        ale_tom = random.randint(1,3)
+        ale_tom = random.randint(1,2)
         if ale_tom == 1:
             self.decision = 1
             os.system('cls')
@@ -550,17 +549,18 @@ class Historias:
 
 #Esto es algo asi como el main
 Clue = Historias()
-Clue.ventana_ini()
 os.system('cls')
+print("-----------------------------------------------------COMIENZA EL JUEGO---------------------------------------------------------")
 print("Se acaba de cometer un homicidio y tu eres el encargado de averiguar quien fue el asesino y que arma utilizaron en el asesinato")
 print("Se te iran dando una serie de pistas en base a los personajes que decidas entrevistar para determinar quien fue el asesino.")
-'''print("Cuentas con la siguiente informacion para empezar: ")
+print("Cuentas con la siguiente informacion para empezar: ")
 print("Personajes:")
 print("1. Luismi \n2. Chayanne\n3. Maribel Guardia\n4. Tom Cruise\n5. Carmen Salinas")
 print("Armas:")
-print("1. Tacon de aguja\n2. Soga\n3. Veneno\n4. Tijeras\n5. Pala")'''
+print("1. Tacon de aguja\n2. Soga\n3. Veneno\n4. Tijeras\n5. Pala")
 print("¡SUERTE EN EL DESAFIO!(Presiona cualquier tecla para continuar)")
 input()
+Clue.ventana_ini()
 
 #Este es para cuando queremos matar a Luismi
 if Clue.matar == 1:
@@ -573,6 +573,7 @@ if Clue.matar == 1:
         print("2.-Declarar al culpable")
         cos = int(input())
         os.system('cls')
+        
         if cos == 1:
             if len(Clue.arreglo_modific) == 0:
                 print("Entrevistaste a todos los sospechosos, tendras que acusar al culpable")
@@ -588,6 +589,7 @@ if Clue.matar == 1:
                     Clue.pista_luismi3()
         if cos == 2:
             Clue.acusar()
+            input()
             ciclo = False
 
 #Este es para cuando queremos matar a Chayane
@@ -614,7 +616,8 @@ if Clue.matar == 2:
                 
         if cos == 2:
             Clue.acusar()
-            ciclo = False
+            input()
+            ciclo = False 
 
 #Este es para cuando queremos matar a Maribel Guardia
 if Clue.matar == 3:
@@ -640,6 +643,7 @@ if Clue.matar == 3:
                 
         if cos == 2:
             Clue.acusar()
+            input()
             ciclo = False
 
 #Este es para cuando queremos matar a Tom Cruise
@@ -666,6 +670,7 @@ if Clue.matar == 4:
                 
         if cos == 2:
             Clue.acusar()
+            input()
             ciclo = False
 
 ##Este es para cuando queremos matar a Carmelita Salinas
@@ -694,4 +699,5 @@ if Clue.matar == 5:
                 
         if cos == 2:
             Clue.acusar()
+            input()
             ciclo = False
