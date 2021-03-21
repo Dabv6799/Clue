@@ -15,6 +15,8 @@ class Historias:
     
 #Este es para todos los pesonajes
     def ventana_ini(self):
+        os.system('cls')
+
         print("Elige a quien matar")
         for i in range(0,len(self.arreglo_pers)):
             print(i+1,".-", self.arreglo_pers[i])
@@ -166,7 +168,7 @@ class Historias:
             os.system('cls')
 
             print("No estuviste taaaaaaaan mal")
-            print("El asesino es: ", self.arreglo[self.aux_asesino-1])
+            print("El asesino es: ", self.arreglo_pers[self.aux_asesino-1])
             print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
             print("Mereces ser policia de barrio")
             
@@ -175,7 +177,7 @@ class Historias:
             os.system('cls')
 
             print("Te fue muy mal")
-            print("El asesino es: ", self.arreglo[self.aux_asesino-1])
+            print("El asesino es: ", self.arreglo_pers[self.aux_asesino-1])
             print("El arma es: ", self.arreglo_arma[self.aux_arma-1])
             print("Dedicate a otras cosas")
 
